@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        table{
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+<table>
+<tr>
+  <td> <img id="img1" onclick="change1()" src="goku_001.jpg"></td>
+</tr>
+<tr>
+    <td> <img id="img2" onclick="change2()" src="goku_002.jpg"></td>
+</tr>
+<tr>
+    <td> <img id="img3" onclick="change3()" src="goku_003.jpg"></td>
+</tr>
+</table>
+</body>
+</html>
+<script>
+
+
+
+
+    function change1() {
+        let top = document.getElementById("img1")
+        if( top.src.includes("goku_001.jpg")){
+            top.src="vegeta_001.jpg"
+        }else{
+            top.src="goku_001.jpg"
+        }
+        check()
+    }
+    function change2() {
+        let middle = document.getElementById("img2")
+        if( middle.src.includes("goku_002.jpg")){
+            middle.src="vegeta_002.jpg"
+            console.log(top.src)
+        }else{
+            middle.src="goku_002.jpg"
+        }
+        check()
+    }
+    function change3() {
+        let bottom = document.getElementById("img3")
+        if( bottom.src.includes("goku_003.jpg")){
+            bottom.src="vegeta_003.jpg"
+        }else{
+            bottom.src="goku_003.jpg"
+        }
+        check()
+    }
+    function check(){
+        let top = document.getElementById("img1")
+        let middle = document.getElementById("img2")
+        let bottom = document.getElementById("img3")
+        if(top.src.includes("goku") && middle.src.includes("goku") && bottom.src.includes("goku")){
+            alert("Chúc mưng")
+        }else if(top.src.includes("vegeta") && middle.src.includes("vegeta") && bottom.src.includes("vegeta")){
+            alert("Chúc mừng")
+            }else{}
+    }
+</script>
